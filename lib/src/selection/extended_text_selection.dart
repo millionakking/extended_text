@@ -10,7 +10,6 @@ import '../extended_rich_text.dart';
 import '../text_overflow_widget.dart';
 import 'extended_text_selection_pointer_handler.dart';
 
-
 ///
 ///  create by zmtzawqlp on 2019/6/5
 ///
@@ -255,7 +254,7 @@ class ExtendedTextSelectionState extends State<ExtendedTextSelection>
 
   VoidCallback _semanticsOnCopy(TextSelectionControls controls) {
     return controls?.canCopy(this) == true
-        ? () => controls.handleCopy(this)
+        ? () => controls.handleCopy(this, ClipboardStatusNotifier())
         : null;
   }
 
